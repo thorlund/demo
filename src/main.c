@@ -5,14 +5,14 @@ void initialize() {
   ticks = SDL_GetTicks();
 }
 
- steenstrupsscreen(float scale){
-    front = [[0.f,0.f],[0.f,2.f],[2.f,0.f],[2.f,2.f]]
-    
-}
-
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glBegin(GL_POLYGON);
-    glEnd();
+// steenstrupsscreen(float scale){
+//    front = [[0.f,0.f],[0.f,2.f],[2.f,0.f],[2.f,2.f]]
+//    
+//}
+//
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+//    glBegin(GL_POLYGON);
+//    glEnd();
 void render() {
   rotation += (double)(ticks - SDL_GetTicks()) * 0.0000000001;
   ticks = SDL_GetTicks();
