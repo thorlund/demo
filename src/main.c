@@ -5,33 +5,33 @@ void initialize() {
   ticks = SDL_GetTicks();
 }
 
-// steenstrupsscreen(float scale){
-//    front = [[0.f,0.f],[0.f,2.f],[2.f,0.f],[2.f,2.f]]
-//    
-//}
-//
-//    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-//    glBegin(GL_POLYGON);
-//    glEnd();
+void scene1(){
+glColor3f(0.0f,0.0f,1.0f);
+glEnable ( GL_LIGHTING ) ;
+glBegin(GL_POLYGON);
+    glVertex3f(-50.f,-50.f,0.0f);
+    glVertex3f(-50.f, 50.f,0.0f);
+    glVertex3f( 50.f,-50.f,0.0f);
+    glVertex3f( 50.f, 50.f,0.0f);
+    glVertex3f(-50.f, 50.f,0.0f);
+glEnd();
+}
+
 void render() {
   rotation += (double)(ticks - SDL_GetTicks()) * 0.0000000001;
   ticks = SDL_GetTicks();
 
+  glTranslated(0.f, 0.f, -400.f+ticks/100.f);
   glPushMatrix();
-
-//  glTranslated(1.f, -8.f, -96.f);
-//  glRotated((6.28 / 16.) * 360. / 6.28, 1., 0., 0.);
-//  glRotated(rotation, 0., 1., 0.);
-//  glTranslated(-64.f, 0.f, -64.f);
-//
-//  if (ticks < 10000) {
-//    scene1();
-//  } else if (ticks < 20000) {
-//    scene2();
-//  } else {
-//    scene3();
-//  }
   
+  
+
+
+  glRotated((6.28 / 16.) * 360. / 6.28, 1., 0., 0.);
+  glRotated(rotation, 0., 1., 0.);
+
+  scene1();
+
   glPopMatrix();
 }
 
